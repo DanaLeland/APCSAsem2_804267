@@ -5,7 +5,14 @@ public class SelectionOfTheSort{
         for(int num = 0; num<10; num++){
             specialArray[num] = (int) (Math.random()*10) + 1;
         }
-        
+        for(int i = 0; i < specialArray.length; i ++){
+            for(int j = 0; j<= i; j++){
+                if(specialArray[i] > j){
+                    specialArray[i] = j;
+            }
+            }
+        }
+       
     }
 
 }
