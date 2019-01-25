@@ -76,7 +76,7 @@ public class StudList{
         studList.add(new Student(name, num, gpa));
         parseUserInput(name, studList.get(studList.size()-1));
     }
-    
+
     public void deleteStudent(int num, String ln){
         int studentExists = -1;
         for (int i = 0; i < studList.size(); i++){
@@ -153,6 +153,28 @@ public class StudList{
         }
     }
 
+    public void findStudent(ArrayList<Student> a, int middle, double gpaSearch, boolean found){
+        int length = studList.size();
+        middle = length/2;
+        found = false;
+        for(int i = 0; i<middle - 1; i++){
+            if(gpaSearch==studList.get(i).getStuGPA()){
+                System.out.println(studList.get(i));
+                found = true;
+            }
+        }
+        for(int j = 0; j>= middle; j++){
+            if(gpaSearch==studList.get(j).getStuGPA()){
+                System.out.println(studList.get(j));
+                found = true;
+            }
+        }
+        if(found = false){
+            System.out.println("Student not found. Please enter valid GPA.");
+        }
+
+    }
+    
     public void clearList(){
         studList.clear();
     }

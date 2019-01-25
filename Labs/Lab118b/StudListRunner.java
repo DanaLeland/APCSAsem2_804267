@@ -8,6 +8,7 @@ public class StudListRunner
         String name; 
         int num; 
         double gpa;
+        double gpaSearch;
         while (!statement.equals("8")){
             System.out.println("Choose an option by entering the corresponding number");
             System.out.println("1: Add student");
@@ -18,6 +19,7 @@ public class StudListRunner
             System.out.println("6: Print student information");
             System.out.println("7: Sort student list");
             System.out.println("8: Exit");
+            System.out.println("9: Find student on list");
             System.out.println();
             statement = in.nextLine();
             if (statement.equals("1")){
@@ -76,6 +78,11 @@ public class StudListRunner
                 System.out.println("The student list has been sorted.");
             }else if (!statement.equals("8")){
                 System.out.println("Error: Invalid command");
+            }
+            else if(statement.equals("9")){
+                System.out.println("Enter ID of student you wish to find.");
+                gpaSearch = in.nextDouble();
+                findStudent(gpaSearch);
             }
             System.out.println();
         }
