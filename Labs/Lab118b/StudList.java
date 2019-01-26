@@ -28,7 +28,7 @@ public class StudList{
     public void runMergeSort(){
         mergeSort(studList, studList.size());
     }
-
+    
     public static void merge(ArrayList<Student> a, ArrayList<Student> l, ArrayList<Student> r, int left, int right){
         int i = 0, j = 0, k = 0;
         while (i < left && j < right){
@@ -44,6 +44,28 @@ public class StudList{
         while (j < right) {
             a.set(k++, r.get(j++));
         }
+    }
+    
+    public void findStudent(double gpaSearch){
+        int length = studList.size();
+        int middle = length/2;
+        boolean found = false;
+        for(int i = 0; i<middle - 1; i++){
+            if(gpaSearch==studList.get(i).getStuGPA()){
+                System.out.println(studList.get(i));
+                found = true;
+            }
+        }
+        for(int j = 0; j>= middle; j++){
+            if(gpaSearch==studList.get(j).getStuGPA()){
+                System.out.println(studList.get(j));
+                found = true;
+            }
+        }
+        if(found = false){
+            System.out.println("Student not found. Please enter valid GPA.");
+        }
+
     }
 
     public void parseUserInput(String name, Student student){
@@ -76,7 +98,7 @@ public class StudList{
         studList.add(new Student(name, num, gpa));
         parseUserInput(name, studList.get(studList.size()-1));
     }
-
+    
     public void deleteStudent(int num, String ln){
         int studentExists = -1;
         for (int i = 0; i < studList.size(); i++){
@@ -153,28 +175,6 @@ public class StudList{
         }
     }
 
-    public void findStudent(ArrayList<Student> a, int middle, double gpaSearch, boolean found){
-        int length = studList.size();
-        middle = length/2;
-        found = false;
-        for(int i = 0; i<middle - 1; i++){
-            if(gpaSearch==studList.get(i).getStuGPA()){
-                System.out.println(studList.get(i));
-                found = true;
-            }
-        }
-        for(int j = 0; j>= middle; j++){
-            if(gpaSearch==studList.get(j).getStuGPA()){
-                System.out.println(studList.get(j));
-                found = true;
-            }
-        }
-        if(found = false){
-            System.out.println("Student not found. Please enter valid GPA.");
-        }
-
-    }
-    
     public void clearList(){
         studList.clear();
     }
@@ -208,10 +208,7 @@ public class StudList{
             System.out.println(studList.get(studentExists).getFullName()+"   "+studList.get(studentExists).getStuNumber()+"   "+studList.get(studentExists).getStuGPA());
         }
     }
-
-    /**
-     * given a six-digit number, checks to see if a student with that number already exists
-     */
+    
     public boolean studNumAlreadyExists(int num){
         for (int i = 0; i < studList.size(); i++){
             if (studList.get(i).getStuNumber() == num){

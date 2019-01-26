@@ -18,8 +18,8 @@ public class StudListRunner
             System.out.println("5: Print all information");
             System.out.println("6: Print student information");
             System.out.println("7: Sort student list");
-            System.out.println("8: Exit");
-            System.out.println("9: Find student on list");
+            System.out.println("8: Find student using GPA");
+            System.out.println("9: Exit the program");
             System.out.println();
             statement = in.nextLine();
             if (statement.equals("1")){
@@ -76,13 +76,13 @@ public class StudListRunner
             }else if (statement.equals("7")){
                 sl.runMergeSort();
                 System.out.println("The student list has been sorted.");
-            }else if (!statement.equals("8")){
-                System.out.println("Error: Invalid command");
-            }
-            else if(statement.equals("9")){
-                System.out.println("Enter ID of student you wish to find.");
+            }else if (statement.equals("8")){
+                System.out.println("Enter the GPA of the student you wish to find.");
                 gpaSearch = in.nextDouble();
-                findStudent(gpaSearch);
+                sl.findStudent(gpaSearch);
+            }
+            else if(!statement.equals("9")){
+                System.out.println("Error: Invalid command");
             }
             System.out.println();
         }
