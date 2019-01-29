@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Chracter
+comment1.params=catchphrase
+comment1.target=void\ setCatchphrase(java.lang.String)
+comment2.params=
+comment2.target=void\ getCatchphrase()
+comment3.params=speed
+comment3.target=void\ setSpeed(int)
+comment4.params=
+comment4.target=void\ getSpeed()
+numComments=5
