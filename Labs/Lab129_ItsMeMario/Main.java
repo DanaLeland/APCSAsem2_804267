@@ -1,7 +1,7 @@
-public class Main
+public class Main extends Character
 {
     public static void main(){
-        //Character mario = new Mario();
-        //System.out.println(Character.getCatchphrase);
+        System.out.println("Catchphrase" + allString);
+        System.out.println("Speed" + allSpeed);
     }
 }
