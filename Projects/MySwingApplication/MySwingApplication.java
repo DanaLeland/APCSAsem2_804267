@@ -9,6 +9,8 @@ public class MySwingApplication implements Runnable {
         canvasComponent = new CanvasComponent(100, 100);
         jFrame.setVisible(true);
         jFrame.add(canvasComponent);
+        canvasComponent.repaint();
+        
     }
     
     public static void main() {
