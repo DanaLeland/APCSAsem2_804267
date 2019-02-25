@@ -6,7 +6,6 @@ public class Card {
         suit = cardSuit;
         rank = cardRank;
         pointValue = cardPointValue;
-        
     }
 
     public String suit() {
@@ -22,14 +21,15 @@ public class Card {
     }
 
     public boolean matches(Card otherCard) {
-        
+        boolean tru = false;
+        if(otherCard.suit.equals(this.suit) && otherCard.rank.equals(this.rank) && otherCard.pointValue == this.pointValue){
+            tru = true;
+        }
+        return tru;
     }
 
     @Override
     public String toString() {
-        
-        // String rank = "A" + "2" + "3" + "4" + "5" + "6" + "7" + "8" + "9" + "10" + "J" + "Q" + "K";
-        // String suit = "Hearts" + "Spades" + "Clubs" + "Diamonds";
-        
+        return "suit: " + this.suit + " " + "| rank: " + this.rank + " " + "| value: " + this.pointValue; 
     }
 }
