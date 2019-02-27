@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Deck
+comment0.text=\r\n\ The\ Deck\ class\ represents\ a\ shuffled\ deck\ of\ cards.\r\n\ It\ provides\ several\ operations\ including\r\n\ \ \ \ \ \ initialize,\ shuffle,\ deal,\ and\ check\ if\ empty.\r\n
+comment1.params=ranks\ suits\ values
+comment1.target=Deck(java.lang.String[],\ java.lang.String[],\ int[])
+comment2.params=
+comment2.target=boolean\ isEmpty()
+comment3.params=
+comment3.target=int\ size()
+comment4.params=
+comment4.target=void\ shuffle()
+comment5.params=
+comment5.target=Card\ deal()
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7
