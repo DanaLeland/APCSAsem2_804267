@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=danaBrand
+comment1.params=
+comment1.target=void\ dana()
+comment2.params=choice
+comment2.target=void\ chooseInsult(int)
+comment3.params=name
+comment3.target=void\ addInsult(java.lang.String)
+comment4.params=
+comment4.target=void\ sort()
+numComments=5

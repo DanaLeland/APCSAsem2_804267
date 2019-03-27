@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Insults
+comment1.params=choice
+comment1.target=void\ chooseInsult(int)
+comment2.params=name
+comment2.target=void\ addInsult(java.lang.String)
+numComments=3
